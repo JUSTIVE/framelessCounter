@@ -1,0 +1,17 @@
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Release\framelessCounter.exe.config
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Release\framelessCounter.exe.manifest
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Release\framelessCounter.application
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Release\framelessCounter.exe
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Release\framelessCounter.pdb
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\MainWindow.g.cs
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\App.g.cs
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter_MarkupCompile.cache
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter_MarkupCompile.lref
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\MainWindow.baml
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.g.resources
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.Properties.Resources.resources
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.csproj.GenerateResource.Cache
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.exe.manifest
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.application
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.exe
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.pdb
