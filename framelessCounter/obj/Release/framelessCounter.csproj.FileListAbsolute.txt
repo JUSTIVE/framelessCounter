@@ -15,3 +15,4 @@ c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCou
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.application
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.exe
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.pdb
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Release\framelessCounter.csprojResolveAssemblyReference.cache

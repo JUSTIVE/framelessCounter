@@ -1,7 +1,8 @@
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Debug\framelessCounter.exe.config
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Debug\framelessCounter.exe.manifest
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Debug\framelessCounter.application
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Debug\framelessCounter.exe
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\bin\Debug\framelessCounter.pdb
-c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.csprojResolveAssemblyReference.cache
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\MainWindow.g.cs
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\App.g.cs
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter_MarkupCompile.cache
@@ -10,5 +11,8 @@ c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCou
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.g.resources
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.Properties.Resources.resources
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.csproj.GenerateResource.Cache
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.exe.manifest
+c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.application
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.exe
 c:\users\kms\documents\visual studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.pdb
+C:\Users\KMS\Documents\Visual Studio 2017\Projects\framelessCounter\framelessCounter\obj\Debug\framelessCounter.csprojResolveAssemblyReference.cache
