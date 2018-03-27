@@ -42,14 +42,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="framelessCounter.exe" size="38360">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="framelessCounter.exe" size="38872">
       <assemblyIdentity name="framelessCounter" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>Mgky6tCIyUPxDMD9KIiLaeRn9IgXIvD93OfQLplxR/o=</dsig:DigestValue>
+        <dsig:DigestValue>ayRbRa3rVa8yHX3MBhWAGddR5khKo5vzp96HmHerTQE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

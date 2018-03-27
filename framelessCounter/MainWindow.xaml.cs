@@ -222,6 +222,9 @@ namespace framelessCounter
         {
             targetTime = (int)(e.NewValue*59/10.0)+1;
             targetTimeLabel.Content = targetTime;
+            DateTime currentTime = DateTime.Now;
+            TimeSpan diff = currentTime.Subtract(startTime);
+            clockText.Foreground = new SolidColorBrush((((targetTime - 1) - diff.Minutes) < 5) ? Colors.Red : Colors.SpringGreen);
             if (onlyOnce)
                 clockText.Content = ((targetTime<10)?"0"+targetTime:targetTime.ToString())+ " : 00";
         }
