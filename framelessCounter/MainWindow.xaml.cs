@@ -33,64 +33,6 @@ namespace framelessCounter
             RightBottom
         }
 
-        [DllImport("user32.dll")]
-        internal static extern int SetWindowCompositionAttribute(IntPtr hwnd, ref WindowCompositionAttributeData data);
-
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct WindowCompositionAttributeData
-        {
-            public WindowCompositionAttribute Attribute;
-            public IntPtr Data;
-            public int SizeOfData;
-        }
-
-        internal enum WindowCompositionAttribute
-        {
-            // ...
-            WCA_ACCENT_POLICY = 19
-            // ...
-        }
-
-        internal enum AccentState
-        {
-            ACCENT_DISABLED = 0,
-            ACCENT_ENABLE_GRADIENT = 1,
-            ACCENT_ENABLE_TRANSPARENTGRADIENT = 2,
-            ACCENT_ENABLE_BLURBEHIND = 3,
-            ACCENT_INVALID_STATE = 4
-        }
-
-        [StructLayout(LayoutKind.Sequential)]
-        internal struct AccentPolicy
-        {
-            public AccentState AccentState;
-            public int AccentFlags;
-            public int GradientColor;
-            public int AnimationId;
-        }
-
-        internal void EnableBlur()
-        {
-            var windowHelper = new WindowInteropHelper(this);
-
-            var accent = new AccentPolicy();
-            var accentStructSize = Marshal.SizeOf(accent);
-            accent.AccentState = AccentState.ACCENT_ENABLE_BLURBEHIND;
-
-            var accentPtr = Marshal.AllocHGlobal(accentStructSize);
-            Marshal.StructureToPtr(accent, accentPtr, false);
-
-            var data = new WindowCompositionAttributeData();
-            data.Attribute = WindowCompositionAttribute.WCA_ACCENT_POLICY;
-            data.SizeOfData = accentStructSize;
-            data.Data = accentPtr;
-
-            SetWindowCompositionAttribute(windowHelper.Handle, ref data);
-
-            Marshal.FreeHGlobal(accentPtr);
-        }
-
-
         private Corner corner = Corner.RightBottom;
         private int targetTime = 20;
         public bool isplaying;
@@ -98,16 +40,19 @@ namespace framelessCounter
         private DateTime startTime;
         private bool onlyOnce = true;
         private bool settingOn;
+
+
+        private int hiddenOptions = 0;
+
         public MainWindow()
         {
             InitializeComponent();
+            //ExtraSettingPage.Visibility = Visibility.Hidden;
             clockText.Content = "20 : 00";
             SettingPage.Visibility = Visibility.Hidden;
             Slider.Value = (20/6.0);
             Mover();
         }
-
-        
 
         ~MainWindow()
         {
@@ -119,7 +64,7 @@ namespace framelessCounter
             DateTime currentTime = DateTime.Now;
             TimeSpan diff = currentTime.Subtract(startTime);
             
-            clockText.Foreground = new SolidColorBrush((((targetTime - 1) - diff.Minutes) < 5)?Colors.Red:Colors.SpringGreen);
+            clockText.Foreground = new SolidColorBrush((((targetTime - 1) - diff.Minutes) < 5)?Colors.Red: Color.FromRgb(138, 234, 146));
             clockText.Content = (((targetTime-1) - diff.Minutes)>=0
                                     ? ((targetTime - 1) - diff.Minutes)>=10
                                         ?((targetTime - 1) - diff.Minutes).ToString() 
@@ -183,6 +128,14 @@ namespace framelessCounter
         {
             settingOn = !settingOn;
             SettingPaneController();
+            hiddenOptions++;
+            if (hiddenOptions >= 7)
+            {
+                ExtraSettingPage.Visibility = (ExtraSettingPage.Visibility == Visibility.Visible)
+                    ? Visibility.Hidden
+                    : Visibility.Visible;
+                hiddenOptions = 0;
+            }
         }
 
         void Mover()
@@ -205,10 +158,10 @@ namespace framelessCounter
                 SettingPage.HorizontalAlignment =
                     (corner == Corner.Leftbottom) ? HorizontalAlignment.Left : HorizontalAlignment.Right;
             }
-            Leftbottombutton.Background = new SolidColorBrush((corner==Corner.Leftbottom)?Colors.SpringGreen : Colors.White);
-            Rightbottombutton.Background = new SolidColorBrush((corner == Corner.RightBottom) ? Colors.SpringGreen : Colors.White);
-            Lefttopbutton.Background = new SolidColorBrush((corner == Corner.Lefttop) ? Colors.SpringGreen : Colors.White);
-            Righttopbutton.Background = new SolidColorBrush((corner == Corner.RightTop) ? Colors.SpringGreen : Colors.White);
+            Leftbottombutton.Background = new SolidColorBrush((corner==Corner.Leftbottom)? Color.FromRgb(138, 234, 146) : Colors.White);
+            Rightbottombutton.Background = new SolidColorBrush((corner == Corner.RightBottom) ? Color.FromRgb(138, 234, 146) : Colors.White);
+            Lefttopbutton.Background = new SolidColorBrush((corner == Corner.Lefttop) ? Color.FromRgb(138, 234, 146) : Colors.White);
+            Righttopbutton.Background = new SolidColorBrush((corner == Corner.RightTop) ? Color.FromRgb(138, 234, 146) : Colors.White);
 
             MainPage.HorizontalAlignment = (corner == Corner.Leftbottom || corner == Corner.Lefttop)
                 ? HorizontalAlignment.Left
@@ -224,9 +177,13 @@ namespace framelessCounter
             targetTimeLabel.Content = targetTime;
             DateTime currentTime = DateTime.Now;
             TimeSpan diff = currentTime.Subtract(startTime);
-            clockText.Foreground = new SolidColorBrush((((targetTime - 1) - diff.Minutes) < 5) ? Colors.Red : Colors.SpringGreen);
+            
             if (onlyOnce)
                 clockText.Content = ((targetTime<10)?"0"+targetTime:targetTime.ToString())+ " : 00";
+            else
+            {
+                clockText.Foreground = new SolidColorBrush((((targetTime - 1) - diff.Minutes) < 5) ? Colors.Red : Color.FromRgb(138, 234, 146));
+            }
         }
 
         private void Lefttopbutton_Click(object sender, RoutedEventArgs e)
@@ -261,13 +218,13 @@ namespace framelessCounter
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            
-
         }
-
         private void MainPage_Loaded(object sender, RoutedEventArgs e)
         {
-            //EnableBlur();
+        }
+        private void settingButton_LostFocus(object sender, RoutedEventArgs e)
+        {
+            hiddenOptions = 0;
         }
     }
 }
